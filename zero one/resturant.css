@@ -1,0 +1,570 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* .row {
+    width: 100%;
+} */
+
+.header {
+   
+    z-index: 4;
+    height: 54px;
+    background-color: #424874;
+    color: white; /* Change text color for better visibility */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; 
+    width: 100%; 
+    position: fixed;
+
+    /* /padding: 8px;/
+    /top: 0;/ */
+    padding-inline-start: 60%;
+}
+
+
+/* .black-row {
+   
+    z-index: 4;
+    height: 8%;
+    background-color: #424874;
+    color: white; /* Change text color for better visibility */
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline-start: 60%;
+} */ 
+
+.header h1 {
+    font-size: 19px;
+    justify-content: space-between;
+}
+
+.header h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.header h1 a:hover {
+    color: #dcd6f7; /* Change color on hover */
+}
+  
+.pink-row {
+    height: 100vh;
+    background: linear-gradient(109.6deg, rgb(78, 112, 157) 11.2%, rgb(137, 164, 199) 65%, rgb(205, 213, 224) 100.2%);
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Added position relative to ensure content is positioned properly */
+    overflow: hidden; /* Hide any overflow from children */
+}
+
+.pink-row::after {
+    content: ''; /* Create a pseudo-element to act as a background overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    filter: blur(10px); /* Add blur effect to the background */
+    z-index: 1; /* Ensure the overlay is below the content */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black; /* Text color for better visibility */
+    z-index: 2; /* Ensure content is above the background overlay */
+    font-family: 'Roboto', sans-serif; /* Apply a stylish font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+}
+
+.content h1 {
+    font-size: 36px; /* Increase the font size for the heading */
+    margin-bottom: 20px; /* Add some margin below the heading */
+    font-weight: bold;
+    text-shadow: 4px 5px 11px #424874;;
+    color: #424874;
+    transition: transform 0.3s ease; /* Add transition effect for smoother hover */
+}
+
+.content h1:hover {
+    transform: scale(2.0); /* Scale up the heading on hover */
+}
+
+.content p {
+    color: white;
+    font-size: 20px; /* Increase the font size for the paragraph */
+    line-height: 1.0; /* Adjust the line height for better readability */
+    font-weight: lighter;
+    font-style: italic; /* Make the heading italic */
+}
+
+.order-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #424874;
+    color: white;
+    padding: 10px 20px;
+    z-index: 3;
+    border-radius: 20%;
+    filter: blur(0.5px);
+}
+
+.order-box h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* menu css */
+
+.body{
+    background-color: rgba(0, 0, 0, 0.19);
+}
+
+.menu-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.menu-box {
+    width: 30%;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-box .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+    
+}
+
+.menu-box:hover .content {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-box .content h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu-box .content p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.menu-box .content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-box .content a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #424874;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.restaurant-info {
+    display: contents;
+    flex-direction: column;
+    align-content: center;
+
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.he {
+    color: white;
+}
+
+.hi {
+    line-height: 1.6;
+}
+
+.me-container h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #424874;
+}
+.me-container{
+    height: 300vh;
+    background-color: #a6b1e1;
+   }
+
+.me-list {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    
+}
+.me-list ul {
+    list-style: none;
+}
+.item {
+    display: flex;
+    border-bottom: 1px solid #424874;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    
+
+}
+
+.image-container {
+    width: 40%;
+}
+
+.image-container img {
+    width: 60%;
+    height: 30vh;
+    float: inline-end;
+    margin-right: 30px;
+    
+    
+}
+
+.content-container {
+    width: 150%;
+    padding: 0 10px;
+}
+
+.item h2 {
+    padding-top: 10px;
+    font-size: 1.5em;
+    color: #424874;
+}
+
+.item p {
+    padding-top: 10px;
+    
+    color: white;
+}
+
+.item span {
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    padding-top: 10px;
+    color:red;
+}
+
+/* feedback css */
+
+.bd {
+    font-family: Arial, sans-serif;
+    background: #dcd6f7; 
+    width: 100%;
+    height: 100vh;
+}
+.contains {
+    text-align: start;
+    max-width: 45%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: #a6b1e1; 
+}
+
+.hh2 {
+    color: white;
+    text-align: center;
+}
+.rating-item, .details {
+    
+    font-size: small;
+}
+label {
+    color: white;
+    font-weight: bold;
+}
+
+.details {
+    padding: 10px;
+}
+textarea{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #424874;
+    border-radius: 4px;
+}
+button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #424874;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.back a {
+    color: #424874;
+    float: inline-start;
+}
+footer {
+    background-color:  #424874;;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* about css */
+
+.restaurant-info {
+    display: contents;
+    flex-direction: column;
+    align-content: center;
+
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.he {
+    color: white;
+}
+
+.hi {
+    line-height: 1.6;
+    font-size: 120%;
+}
+
+
+.content1 {
+    flex-direction: column;  /*Display image and text side by side */
+    justify-content: center;
+    line-height: 1.6;
+    font-size: 120%;
+    display: flex;
+  
+}
+
+
+.image-container1 {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    height: 630px; /* Set a fixed height for the image container */
+    overflow: hidden; /* Hide any overflow (in case the image is larger than the container) */
+}
+
+.image-container1 img {
+    width: 100%; /* Make the image fill the container horizontally */
+    height: 100%; /* Make the image fill the container vertically */
+    object-fit: cover; /* Scale the image while preserving its aspect ratio to cover the entire container */
+}
+.container1 {
+    overflow: hidden; /* Clear float */
+    line-height: 1.6;
+    font-size: 120%;
+}
+    .image-wrapper {
+        display: flex;
+        justify-content: space-between; /* Distribute space between the images */
+        margin-top: 20px; /* Adjust as needed */
+    }
+    
+    .image-container1 {
+        flex: 0 0 35%; /* Each image container takes up 45% of the available space with some margin */
+        max-width: 100%; /* Ensure each image container takes up 45% of the available width with some margin */
+        height: 500px; /* Set a fixed height for the image container */
+        overflow: hidden; /* Hide any overflow (in case the image is larger than the container) */
+       
+        margin-bottom: 20px; /* Add margin between each image */
+    }
+    
+    .image-container1:first-child {
+        margin-right: 10%; /* Add margin to the right of the first image to create a gap */
+    }
+    
+    .image-container1:last-child {
+        margin-left: 10%; /* Add margin to the left of the last image to create a gap */
+    }
+    
+    .image-container1 img {
+        width: 100%; /* Make the image fill the container horizontally */
+        height: 100%; /* Make the image fill the container vertically */
+        object-fit: cover; /* Scale the image while preserving its aspect ratio to cover the entire container */
+    }
+    
+    .image-container1 p {
+        text-align: center; /* Center the text */
+    }
+    .dish-info {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dish-info h2 {
+    
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    font-size: 135%;
+    }
+    
+    .dish-info h3 {
+        line-height: 1.6;
+    font-size: 130%;
+        color: #424874;
+        margin-top: 20px;
+    }
+    
+    .dish-info p {
+        font-size: 16px;
+        
+        line-height: 1.6;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    font-size: 120%;
+    }
+    
+    .dish-info p:last-child {
+        margin-bottom: 0;
+    }
+.wow{
+    color:rgb(128,0,0);
+}
+
+
+
+
+
+/* about extra */
+
+.order-now {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #424874;
+    z-index: 1;
+}
+
+.order-now h1 {
+    font-size: 36px;
+}
+
+.content3 {
+    padding: 20px;
+    color: #424874;
+    position: relative;
+    z-index: 2;
+    background-color:  #f4eeff; 
+    box-shadow:  0 8px 12px 0 #424874;
+}
+
+.offer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.box {
+    width: 30%;
+    background-color: #a6b1e1;;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:  0 4px 8px 0 #424874;
+}
+
+
+.box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 18px;
+}
+
+.time-schedule {
+    text-align: center;
+}
+
+.time-schedule h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 3px solid #a6b1e1; 
+}
+
+
+
+
+
+
