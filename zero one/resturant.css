@@ -5,7 +5,6 @@
 }
 .container {
     height: 630vh;
-    border: 2px solid black;
 }
 /* .row {
     width: 100%;
@@ -113,7 +112,13 @@
     font-size: 18px;
     margin: 0;
 }
-
+footer {
+    text-align: center;
+    height: 5vh;
+    background-color: #424874;
+    padding: 10px 0px;
+    color: white;
+}
 /* menu css */
 .body{
     background-color: rgba(0, 0, 0, 0.19);
@@ -334,15 +339,7 @@ button {
     color: #424874;
     float: inline-start;
 }
-footer {
-    background-color:  #424874;;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 /* about css */
 
 header {
