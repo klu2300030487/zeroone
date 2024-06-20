@@ -115,7 +115,6 @@
 }
 
 /* menu css */
-
 .body{
     background-color: rgba(0, 0, 0, 0.19);
 }
@@ -139,12 +138,10 @@ padding-bottom: 20px;
     position: relative;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .menu-box img {
     width: 100%;
     height: 100%;
 }
-
 .menu-box .content {
     flex: 1;
     display: flex;
@@ -211,7 +208,6 @@ main {
 .hi {
     line-height: 1.6;
 }
-
 .me-container h1 {
       display: flex;
       justify-content: center;
@@ -264,6 +260,7 @@ main {
     padding-top: 10px;
     font-size: 1.5em;
     color: #424874;
+    text-align: start;
 }
 
 .item p {
@@ -303,14 +300,18 @@ h2 {
     text-align: center;
 }
 .rating-item,.details {
-    font-size: small;
+    font-size: 1rem;
 }
 label {
     color: white;
     font-weight: bold;
 }
-.details input[text=name] {
+.details {
     width: 80%;
+    padding-bottom: 20px;
+}
+.rating-item {
+    padding-bottom: 20px;
 }
 textarea{
     display: flex;
@@ -351,30 +352,24 @@ header h1 {
     color: #424874;
 }
 .he {
-    color: white;
+    color: #424874;
 }
 .hi {
     line-height: 1.6;
     font-size: 120%;
 }
-
-
 .content1 {
     flex-direction: column;  /*Display image and text side by side */
     justify-content: center;
     line-height: 1.6;
     font-size: 120%;
     display: flex;
-  
 }
-
-
 .image-container1 {
     max-width: 100%; /* Ensure the image doesn't exceed the container width */
     height: 630px; /* Set a fixed height for the image container */
     overflow: hidden; /* Hide any overflow (in case the image is larger than the container) */
 }
-
 .image-container1 img {
     width: 100%; /* Make the image fill the container horizontally */
     height: 100%; /* Make the image fill the container vertically */
