@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .container {
-    height: 630vh;
+    height: 660vh;
 }
 /* .row {
     width: 100%;
@@ -50,7 +50,6 @@
     position: relative; /* Added position relative to ensure content is positioned properly */
     overflow: hidden; /* Hide any overflow from children */
 }
-
 .pink-row::after {
     content: ''; /* Create a pseudo-element to act as a background overlay */
     position: absolute;
@@ -62,7 +61,9 @@
     filter: blur(10px); /* Add blur effect to the background */
     z-index: 1; /* Ensure the overlay is below the content */
 }
-
+.container .menu-row1 {
+    margin-top: 10px;
+}
 .content {
     position: absolute;
     top: 50%;
@@ -74,7 +75,11 @@
     font-family: 'Roboto', sans-serif; /* Apply a stylish font */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
 }
-
+.content img {
+    height: 40vh;
+    width: 50%;
+    margin-top: -50px;
+}
 .content h1 {
     font-size: 36px; /* Increase the font size for the heading */
     margin-bottom: 20px; /* Add some margin below the heading */
@@ -123,16 +128,87 @@ footer {
 .body{
     background-color: rgba(0, 0, 0, 0.19);
 }
-
-.menu-row {
+.container-in {
+    background-color: #a6b1e1;
+}
+h1 {
+    text-align: center;
+    color: #424874;
+    padding-top: 10px;
+}
+.slide-frame {
+    height: 90vh;
+    width: 90%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    margin-top: 120px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.90);
+}
+.slide-images {
+    width: 100%;
+    display: flex;
+    animation: slide 15s infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    16.66% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    36.66% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    56.66% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    76.66% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    86.66% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+img {
+    width: 100%;
+}
+.menu-row1 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-padding-top: 20px;
-padding-bottom: 20px;
+    margin-top: 700px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-
+.menu-row2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .menu-box {
     width: 30%;
     height: 270px;
@@ -156,56 +232,45 @@ padding-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     box-sizing: border-box;
-    transition: 0.3s ease;
-    
+    transition: 0.3s ease;   
 }
-
 .menu-box:hover .content {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
 .menu-box .content h2 {
     color: white;
     font-size: 24px;
     margin-bottom: 10px;
 }
-
 .menu-box .content p {
     color: white;
     font-size: 16px;
     margin-bottom: 10px;
 }
-
 .menu-box .content a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 .menu-box .content a:hover {
     text-decoration: underline;
 }
-
 header {
     background-color: #424874;
     color: white;
     text-align: center;
     padding: 20px 0;
 }
-
 main {
     padding: 20px;
 }
-
 .restaurant-info {
     display: contents;
     flex-direction: column;
     align-content: center;
-
     max-width: 600px;
     margin: 0 auto;
 }
-
 .he {
     color: white;
 }
@@ -213,102 +278,149 @@ main {
 .hi {
     line-height: 1.6;
 }
-.me-container h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #424874;
-}
-.me-container{
-    height: 300vh;
+/* items css */
+.item-box {
+    height: 260vh;
+    width: 100%;   
     background-color: #a6b1e1;
-   }
-
-.me-list {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 20px;
-    
 }
-.me-list ul {
-    list-style: none;
-}
-.item {
+.one-one,.two-two,.three-three,.four-four {
+    height: 60vh;
+    width: 95%;
+    margin-left: 40px;
     display: flex;
-    border-bottom: 1px solid #424874;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    
-
+    justify-content: space-around;
+    align-items: center;
 }
-
-.image-container {
+.box1,.box2 {
+    height: 50vh;
     width: 40%;
+    display: flex;
+    border: 2px solid #424874;
+    border-radius: 20px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.image-container img {
-    width: 60%;
-    height: 30vh;
-    float: inline-end;
-    margin-right: 30px;
-    
-    
+.box3 {
+    height: 50vh;
+    width: 50%;
+    border-radius:20px 0px 0px 20px;
+    border-right: 0px;
 }
-
-.content-container {
-    width: 150%;
-    padding: 0 10px;
+.box3 img {
+    height: 49.6vh;
+    width: 100%;
+    border-radius:20px 0px 0px 20px;
 }
-
-.item h2 {
-    padding-top: 10px;
-    font-size: 1.5em;
+.box4 h2 {
     color: #424874;
     text-align: start;
+    padding: 10px 0px;
 }
-
-.item p {
-    padding-top: 10px;
+.box4 {
+    height: 49.5vh;
+    width: 50%;
+    padding: 0px 10px;
+    color: #424874;
+    text-align: justify;
+    background-color: white;
     
-    color: white;
+    border-left: 0px;
+    border-radius:0px 20px 20px 0px;
 }
-
-.item span {
-    display: block;
-    font-weight: bold;
-    font-size: x-large;
-    padding-top: 10px;
-    color:red;
-}
-
-/* feedback css */
-.contains {
-    width: 45%;
-    margin-top: 150px;
-    margin-left: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #a6b1e1; 
-    height: 50vh;
+.box4 p {
+    padding-bottom: 20px;
 }
 span {
-    font-size: 20px; 
+    color: white;
+    font-weight: bold;
+    background-color: #424874 ;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+/* beverages,icecreams css */ 
+.container2 {
+    height: 200vh;
+    width: 100%;
+    background-color: #a6b1e1;
+}
+.container2 h1 {
+    padding-top: 10px;
+}
+.box-one,.box-two,.box-three {
+    height: 55vh;
+    width: 90%;
+    margin-left: 80px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.one-box,.two-box,.three-box {
+    height: 55vh;
+    width: 20%;
+    border-radius: 20px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border: 2px solid #424874;
+}
+.img-box {
+    height: 40vh;
+}
+.img-box img {
+    height: 40vh;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+.con-box {
+    height: 10vh;
+}
+.con-box h1 {
+    color: #424874;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.con-box h2 {
+    padding-bottom: 20px;
+}
+.con-box span {
+    margin-left: 100px;
+    color: white;
+}
+/* feedback css */
+.container-one {
+    height: 73vh;
+}
+.contains {
+    width: 45%;
+    margin-top: 120px;
+    margin-left: 400px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #a6b1e1;
+    height: 60vh;
+}
+.contains img {
+    width: 20%;
 }
 a {
     color: #424874;
     text-decoration: none;
 }
 h2 {
-    color: white;
+    padding: 10px 0px;
+    color: #424874;
     text-align: center;
+}
+h4 {
+    padding-top: 10px;
 }
 .rating-item,.details {
     font-size: 1rem;
 }
 label {
-    color: white;
+    color: #424874;
     font-weight: bold;
 }
 .details {
@@ -327,17 +439,14 @@ textarea{
 }
 button {
     display: block;
-    margin: 20px auto 0;
+    margin-top: 30px;
     padding: 10px 20px;
     background-color: #424874;
     color: #fff;
     border: none;
     border-radius: 4px;
+    margin-left: 270px;
     cursor: pointer;
-}
-.back a {
-    color: #424874;
-    float: inline-start;
 }
 
 /* about css */
